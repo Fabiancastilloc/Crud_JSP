@@ -1,0 +1,153 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --color-primary: #094293;
+  --color-secondary: #4a148c;
+  --color-accent: #00bcd4;
+  --color-text: #333333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.options-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.options-list li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+.options-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.options-list li {
+  margin: 0 10px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-secondary);
+}
+
+.button i {
+  margin-right: 5px;
+}
+
+.additional-content {
+  margin-top: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.genius-block {
+  background-color: var(--color-accent);
+  padding: 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.genius-block h4 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.genius-block p {
+  margin-bottom: 10px;
+}
+
+/* Collage de imágenes */
+.image-collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.image-collage img {
+  width: 100%;
+  height: auto;
+}
+
+/* Animaciones */
+.container {
+  animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,68 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.btn-registrar {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #094293;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.btn-inicio {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #2196f3;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
