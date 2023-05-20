@@ -23,8 +23,6 @@ public class ControladorContrato extends HttpServlet {
         contratoDAO = new ContratoDAO(ConexionBD.getConnection());
     }
 
-    // ...
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -81,7 +79,6 @@ public class ControladorContrato extends HttpServlet {
 
     private void mostrarFormularioRegistro(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Implementa la lógica para mostrar el formulario de registro de contrato (registrarContrato.jsp)
         List<Usuario> usuarios = contratoDAO.listarUsuarios();
         request.setAttribute("usuarios", usuarios);
         request.getRequestDispatcher("vistas/contrato/registrar.jsp").forward(request, response);
@@ -89,7 +86,6 @@ public class ControladorContrato extends HttpServlet {
 
     private void mostrarFormularioEdicion(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Implementa la lógica para mostrar el formulario de edición de contrato (editarContrato.jsp)
         int id = Integer.parseInt(request.getParameter("id"));
         Contrato contrato = contratoDAO.obtenerContratoPorId(id);
         List<Usuario> usuarios = contratoDAO.listarUsuarios();
@@ -100,7 +96,6 @@ public class ControladorContrato extends HttpServlet {
 
     private void registrarContrato(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Implementa la lógica para registrar un nuevo contrato en la base de datos
         String fechaFirma = request.getParameter("fechaFirma");
         String fechaInicio = request.getParameter("fechaInicio");
         String fechaFin = request.getParameter("fechaFin");
@@ -127,7 +122,6 @@ public class ControladorContrato extends HttpServlet {
 
     private void editarContrato(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Implementa la lógica para editar un contrato en la base de datos
         int id = Integer.parseInt(request.getParameter("id"));
         String fechaFirma = request.getParameter("fechaFirma");
         String fechaInicio = request.getParameter("fechaInicio");
@@ -155,7 +149,6 @@ public class ControladorContrato extends HttpServlet {
 
     private void eliminarContrato(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Implementa la lógica para eliminar un contrato de la base de datos
         int id = Integer.parseInt(request.getParameter("id"));
 
         boolean eliminado = contratoDAO.eliminarContrato(id);
@@ -171,7 +164,6 @@ public class ControladorContrato extends HttpServlet {
 
     private void listarContratos(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Implementa la lógica para obtener y mostrar todos los contratos de la base de datos
         List<Contrato> contratos = contratoDAO.listarContratos();
         request.setAttribute("contratos", contratos);
         request.getRequestDispatcher("vistas/contrato/listar.jsp").forward(request, response);
@@ -185,7 +177,6 @@ public class ControladorContrato extends HttpServlet {
     
     private void buscarContratos(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Implementa la lógica para buscar contratos por usuario
         int usuarioCc = Integer.parseInt(request.getParameter("usuarioCc"));
         List<Contrato> contratos = contratoDAO.obtenerContratos(usuarioCc);
         request.setAttribute("contratos", contratos);
